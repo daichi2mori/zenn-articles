@@ -20,12 +20,14 @@ bunx create-vite
 
 2. プロジェクト名
 上記コマンドを実行するとプロジェクト名を聞かれるので、好きな名前を入力する
+
 ```bash
 ? Project name: › my-react-app
 ```
 
 3. フレームワーク選択
 Reactを選択した状態でEnter
+
 ```bash
 ? Select a framework: › - Use arrow-keys. Return to submit.
     Vanilla
@@ -41,6 +43,7 @@ Reactを選択した状態でEnter
 
 4. 言語とトランスパイラー選択
 今回はTypeScript + SWCを選択します。
+
 :::details SWCとは？
 Rustで作成されたトランスパイラーで、Babelより高速に動きます。
 最近ではSWCがデフォルトスタンダードになっています。
@@ -56,6 +59,7 @@ Rustで作成されたトランスパイラーで、Babelより高速に動き�
 
 5. 依存関係インストール
 `cd`でプロジェクトディレクトリに移動し、依存関係をインストールする
+
 ```bash
 cd my-react-app
 ```
@@ -65,6 +69,7 @@ bun install
 
 6. スクリプト編集
 開発サーバーを簡単に起動できるようにスクリプトを変更する
+
 ```diff json
 "scripts": {
 -  "dev": "vite",
@@ -75,15 +80,18 @@ bun install
 ```
 
 7. 開発サーバーを起動する
+
 ```bash
 bun dev
 ```
+
 以下のような画面が起動すれば成功
 ![react起動画面](/images/2023-12-17-bun-vite-react/image.webp =400x)
 
 
 
 ## オプションでテンプレートを直接指定
+
 ```bash
 bunx create-vite my-react-app --template react-ts
 cd my-react-app
