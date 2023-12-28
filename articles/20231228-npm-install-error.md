@@ -1,12 +1,12 @@
 ---
-title: ""
+title: "bunでreact環境を作ろうとしたらダウンロードできずにエラーになった"
 emoji: "🦁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["npm"]
 published: true
 ---
 
-bunでreact環境を作るろうとしたらダウンロードできずにエラーになった
+以下のコマンドを実行するとエラーになった
 
 ```bash
 bunx create-vite
