@@ -68,21 +68,21 @@ bun install
 ```
 
 6. スクリプト編集
-開発サーバーを簡単に起動できるようにスクリプトを変更する
+開発用と本番用のスクリプトを変更する
 
 ```diff json
 "scripts": {
 -  "dev": "vite",
+-  "build": "vite build",
 +  "dev": "bunx --bun vite",
-   "build": "vite build",
-   "serve": "vite preview"
++  "build": "bunx --bun vite build",
 },
 ```
 
 7. 開発サーバーを起動する
 
 ```bash
-bun dev
+bun run dev
 ```
 
 以下のような画面が起動すれば成功
@@ -96,7 +96,7 @@ bun dev
 bunx create-vite my-react-app --template react-ts
 cd my-react-app
 bun install
-bun dev
+bun run dev
 ```
 
 上記のコマンドを実行することで、Viteが用意してくれているテンプレートを使用でき、後は依存関係をインストールするだけですぐに開発できるようになる
