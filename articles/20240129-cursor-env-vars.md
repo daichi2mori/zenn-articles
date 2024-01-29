@@ -3,7 +3,7 @@ title: "windowsでcursorを設定後、codeコマンドでvscodeが開けなく�
 emoji: "🐈"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["cursor", "vscode"]
-published: false
+published: true
 ---
 ## 環境変数の編集
 * windows設定の検索から「システムの詳細設定」を選択
