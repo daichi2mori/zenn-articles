@@ -3,7 +3,7 @@ title: "react環境変数"
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["react", "vite"]
-published: false
+published: true
 ---
 ## 環境変数の設定
 reactで環境変数を設定するには`.env`ファイルを作成する必要がある。
