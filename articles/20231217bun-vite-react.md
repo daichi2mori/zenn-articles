@@ -86,7 +86,7 @@ bun run dev
 ```
 
 以下のような画面が起動すれば成功
-![react起動画面](/images/2023-12-17-bun-vite-react/image.webp =400x)
+![react起動画面](/images/articles/20231217-bun-vite-react/image.webp =400x)
 
 
 

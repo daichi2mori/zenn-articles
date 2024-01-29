@@ -40,7 +40,7 @@ const test = () => {
 ![altテキスト](https://画像のURL)
 ```
 
-![浜辺の洞窟](/images/2023-12-13-zenn-article-test/ocean.webp)
+![浜辺の洞窟](/images/articles/20231213-zenn-article-test/ocean.webp)
 
 画像の幅はURLの後ろに半角スペースを開けて`=00x`という記述で、画像幅をpx単位で指定できる。
 
@@ -48,7 +48,7 @@ const test = () => {
 ![altテキスト](https://画像のURL =250x)
 ```
 
-![浜辺の洞窟](/images/2023-12-13-zenn-article-test/ocean.webp =250x)
+![浜辺の洞窟](/images/articles/20231213-zenn-article-test/ocean.webp =250x)
 
 
 
