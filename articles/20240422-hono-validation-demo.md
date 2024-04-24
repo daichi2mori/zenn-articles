@@ -77,7 +77,90 @@ app.post(
 );
 ```
 
+## Typebox
+
+Typebox に関しても zod と使用方法は変わらない
+
+```ts
+import { Hono } from "hono";
+import { Type } from "@sinclair/typebox";
+import { tbValidator } from "@hono/typebox-validator";
+
+const app = new Hono();
+
+const schema = Type.Object({
+  str: Type.String(),
+  num: Type.Number(),
+});
+
+app.post(
+  "/json",
+  tbValidator("json", schema, (result, c) => {
+    if (!result.success) {
+      return c.json({ message: "|||||／(￣ロ￣;)＼||||||| まじ～～？" }, 400);
+    }
+  }),
+  (c) => {
+    const { str, num } = c.req.valid("json");
+    console.log(str, num);
+    return c.text("ok");
+  }
+);
+```
+
+## Typia
+
+Typia は他と使用方法が異なっている。
+スキーマを設定するには、コンパイルを行い Typia 用のファイルを生成する必要がある。
+まず以下のように interface を設定し、createValidate メソッドのジェネリクスに入れる。
+
+```ts
+import typia from "typia";
+
+interface IMember {
+  str: string;
+  num: number;
+}
+
+export const typiaValidate = typia.createValidate<IMember>();
+```
+
+その後以下の生成用コマンドを実行する。
+私は src/templates に先ほど記述したファイルを格納しており、生成後は src/generated に出力されるようにしている。
+
+```bash
+npx typia generate --input src/templates --output src/generated --project tsconfig.json
+```
+
+生成されたファイルからスキーマを import すると、あとは zod 等と使用方法は同じ。
+
+```ts
+import { Hono } from "hono";
+import { typiaValidator } from "@hono/typia-validator";
+import { typiaValidate } from "./generated/typia";
+
+const app = new Hono();
+
+app.post(
+  "/json",
+  typiaValidator("json", typiaValidate, (result, c) => {
+    if (!result.success) {
+      return c.json({ message: "|||||／(￣ロ￣;)＼||||||| まじ～～？" }, 400);
+    }
+  }),
+  (c) => {
+    const { str, num } = c.req.valid("json");
+    console.log(str, num);
+    return c.text("ok");
+  }
+);
+```
+
+Typia には transform mode というのがあるけどよくわからなかった。。
+
 ## 参考
 
 https://takagi.blog/validation-for-hono-v3/
 https://hono.dev/guides/validation
+https://typia.io/docs/setup/#transformation
+https://typia.io/docs/validators/validate/
