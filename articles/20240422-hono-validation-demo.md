@@ -11,8 +11,11 @@ published: true
 - hono: 4.2.5
 - zod: 3.23.0
 - valibot: 0.30.0
+- @sinclair/typebox: 0.32.23
 - @hono/zod-validator: 0.2.1
 - @hono/valibot-validator: 0.2.3
+- @hono/typebox-validator: 0.2.3
+- @hono/typia-validator: 0.0.3
 
 ## Zod
 
