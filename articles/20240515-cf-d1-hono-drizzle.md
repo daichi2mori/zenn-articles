@@ -3,7 +3,7 @@ title: "Cloudflare D1 × Hono × Drizzle ORM"
 emoji: "😽"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["hono", "drizzle"]
-published: false
+published: true
 ---
 
 ## プロジェクト作成
