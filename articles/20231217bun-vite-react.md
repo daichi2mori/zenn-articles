@@ -7,26 +7,27 @@ published: true
 ---
 
 ## 公式サイトはこちら
+
 @[card](https://vitejs.dev/guide/)
 @[card](https://bun.sh/guides/ecosystem/vite)
 
-
-
 ## プロジェクト作成
+
 1. コマンド実行
+
 ```bash
-bunx create-vite
+bun create vite
 ```
 
 2. プロジェクト名
-上記コマンドを実行するとプロジェクト名を聞かれるので、好きな名前を入力する
+   上記コマンドを実行するとプロジェクト名を聞かれるので、好きな名前を入力する
 
 ```bash
 ? Project name: › my-react-app
 ```
 
 3. フレームワーク選択
-Reactを選択した状態でEnter
+   React を選択した状態で Enter
 
 ```bash
 ? Select a framework: › - Use arrow-keys. Return to submit.
@@ -42,11 +43,11 @@ Reactを選択した状態でEnter
 ```
 
 4. 言語とトランスパイラー選択
-今回はTypeScript + SWCを選択します。
+   今回は TypeScript + SWC を選択します。
 
-:::details SWCとは？
-Rustで作成されたトランスパイラーで、Babelより高速に動きます。
-最近ではSWCがデフォルトスタンダードになっています。
+:::details SWC とは？
+Rust で作成されたトランスパイラーで、Babel より高速に動きます。
+最近では SWC がデフォルトスタンダードになっています。
 :::
 
 ```bash
@@ -58,17 +59,18 @@ Rustで作成されたトランスパイラーで、Babelより高速に動き�
 ```
 
 5. 依存関係インストール
-`cd`でプロジェクトディレクトリに移動し、依存関係をインストールする
+   `cd`でプロジェクトディレクトリに移動し、依存関係をインストールする
 
 ```bash
 cd my-react-app
 ```
+
 ```bash
 bun install
 ```
 
 6. スクリプト編集
-開発用と本番用のスクリプトを変更する
+   開発用と本番用のスクリプトを変更する
 
 ```diff json
 "scripts": {
@@ -88,8 +90,6 @@ bun run dev
 以下のような画面が起動すれば成功
 ![react起動画面](/images/articles/20231217-bun-vite-react/image.webp =400x)
 
-
-
 ## オプションでテンプレートを直接指定
 
 ```bash
@@ -99,5 +99,5 @@ bun install
 bun run dev
 ```
 
-上記のコマンドを実行することで、Viteが用意してくれているテンプレートを使用でき、後は依存関係をインストールするだけですぐに開発できるようになる
-しかし、このテンプレートのトランスパイラーはBabelを使用している点に注意
+上記のコマンドを実行することで、Vite が用意してくれているテンプレートを使用でき、後は依存関係をインストールするだけですぐに開発できるようになる
+しかし、このテンプレートのトランスパイラーは Babel を使用している点に注意
