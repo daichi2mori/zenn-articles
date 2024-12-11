@@ -145,10 +145,7 @@ export default {
 
 - `schema` - スキーマ定義をしたファイルを指定します。
 - `out` - スキーマ定義から生成した sql ファイル等が出力されます。
-- `driver` - 使用するドライバーを指定します。接続 URL が使用できない場合に便利です。
-- `dialect` - `postgresql`,`mysql`,`sqlite`から選択します。D1 では SQLite です。
-- `wranglerConfigPath` - path という割に`./`が必要ないです。
-- `dbName` - D1 作成時に指定したデータベース名を記入します。
+- `dialect` - `mysql`,`postgresql`,`singlestore`,`sqlite`,`turso`から選択します。D1 では SQLite です。
 
 ### SQL ファイル生成
 
